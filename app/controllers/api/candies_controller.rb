@@ -1,6 +1,6 @@
 class Api::CandiesController < ApplicationController
   def index
-    @photos = Candy.all
+    @candies = Candy.all
     render "index.json.jb"
   end
 
@@ -22,7 +22,7 @@ class Api::CandiesController < ApplicationController
   def update
     @candy = Candy.find_by(id: params[:id])
     @candy.name = params[:name] || @candy.name
-    @candy.width = params[:price] || @candy.price
+    @candy.price = params[:price] || @candy.price
     @candy.brand = params[:brand] || @candy.brand
     @candy.save
     render "show.json.jb"
