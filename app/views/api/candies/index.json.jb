@@ -1,0 +1,8 @@
+@candies.map do |candy|
+  {
+    id: candy.id,
+    name: candy.name,
+    price: candy.price,
+    brand: candy.brand,
+  }
+end
